@@ -39,11 +39,17 @@ smsclear (){
 SMSENDCOUNT=$(($SMSSTARTCOUNT+$SMSCOUNT))
 echo "Обнаружено $SMSCOUNT смс, вычищаем диапазон $SMSSTARTCOUNT-$SMSENDCOUNT"
 
-exit 0
+SMSID=$SMSSTARTCOUNT
+while [ $SMSID -lt $SMSENDCOUNT ]
+do
+	echo "Удаляем sms с  $SMSID"
+	echo "Выполнится команда"
+	hlcli SmsDelete -id  $SMSID -endpoint http://192.168.8.1
+	SMSID=$(( $SMSID + 1 ))
+done
 
 
 
-hlcli SmsDelete -id 40009 -endpoint http://192.168.8.1
 }
 
 
@@ -60,8 +66,7 @@ done
 if [ -z "$CONTENT" ]; then
 	echo "Мы не нашли смс с заданных номеров, завершаем работу скрипта"
 else
-	echo "Есть новые sms"
-	echo "Как нас попросил Андрей Вадимович дергаем ссылки"
+	echo "Есть новые sms, дергаем ссылки"
 	numbers # Вызываем функцию web запроса к массиву номеров
 	echo "Теперь необходимо очистить список смс, вызываем функцию очистки"
 	smsclear
