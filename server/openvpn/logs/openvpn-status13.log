@@ -1,0 +1,10 @@
+OpenVPN CLIENT LIST
+Updated,Sun Dec 25 21:32:13 2022
+Common Name,Real Address,Bytes Received,Bytes Sent,Connected Since
+cltest,178.176.78.214:12942,1145603662,1077732805,Tue Dec 20 14:20:22 2022
+ROUTING TABLE
+Virtual Address,Common Name,Real Address,Last Ref
+0a:48:ca:4c:ed:3b,cltest,178.176.78.214:12942,Sun Dec 25 21:32:12 2022
+GLOBAL STATS
+Max bcast/mcast queue length,1
+END

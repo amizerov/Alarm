@@ -1,0 +1,174 @@
+Sun Nov 29 21:00:02 2020 WARNING: file 'server.key' is group or others accessible
+Sun Nov 29 21:00:02 2020 OpenVPN 2.4.4 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on May 27 2020
+Sun Nov 29 21:00:02 2020 library versions: OpenSSL 1.1.1  11 Sep 2018, LZO 2.08
+Sun Nov 29 21:00:02 2020 NOTE: the current --script-security setting may allow this configuration to call user-defined scripts
+Sun Nov 29 21:00:02 2020 Diffie-Hellman initialized with 2048 bit key
+Sun Nov 29 21:00:02 2020 ******* WARNING *******: '--cipher none' was specified. This means NO encryption will be performed and tunnelled data WILL be transmitted in clear text over the network! PLEASE DO RECONSIDER THIS SETTING!
+Sun Nov 29 21:00:02 2020 ******* WARNING *******: '--auth none' was specified. This means no authentication will be performed on received packets, meaning you CANNOT trust that the data received by the remote side have NOT been manipulated. PLEASE DO RECONSIDER THIS SETTING!
+Sun Nov 29 21:00:02 2020 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Sun Nov 29 21:00:02 2020 TUN/TAP device tap2 opened
+Sun Nov 29 21:00:02 2020 TUN/TAP TX queue length set to 100
+Sun Nov 29 21:00:02 2020 do_ifconfig, tt->did_ifconfig_ipv6_setup=0
+Sun Nov 29 21:00:02 2020 /sbin/ip link set dev tap2 up mtu 1399
+Sun Nov 29 21:00:02 2020 /sbin/ip addr add dev tap2 192.168.102.1/24 broadcast 192.168.102.255
+Sun Nov 29 21:00:02 2020 Could not determine IPv4/IPv6 protocol. Using AF_INET
+Sun Nov 29 21:00:02 2020 Socket Buffers: R=[65536->7864320] S=[65536->7864320]
+Sun Nov 29 21:00:02 2020 UDPv4 link local (bound): [AF_INET][undef]:1602
+Sun Nov 29 21:00:02 2020 UDPv4 link remote: [AF_UNSPEC]
+Sun Nov 29 21:00:02 2020 MULTI: multi_init called, r=256 v=256
+Sun Nov 29 21:00:02 2020 IFCONFIG POOL: base=192.168.102.2 size=253, ipv6=0
+Sun Nov 29 21:00:02 2020 Initialization Sequence Completed
+Sun Nov 29 21:00:16 2020 178.176.74.165:40184 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Sun Nov 29 21:00:16 2020 178.176.74.165:40184 TLS: Initial packet from [AF_INET]178.176.74.165:40184, sid=62079719 6e3c45c5
+Sun Nov 29 21:00:19 2020 178.176.74.165:40184 VERIFY OK: depth=1, C=US, ST=CA, L=SanFrancisco, O=Fort-Funston, OU=MyOrganizationalUnit, CN=Fort-Funston CA, name=EasyRSA, emailAddress=me@myhost.mydomain
+Sun Nov 29 21:00:19 2020 178.176.74.165:40184 VERIFY OK: depth=0, C=US, ST=CA, L=SanFrancisco, O=Fort-Funston, OU=MyOrganizationalUnit, CN=cltest, name=EasyRSA, emailAddress=me@myhost.mydomain
+Sun Nov 29 21:00:19 2020 178.176.74.165:40184 peer info: IV_VER=2.3.11
+Sun Nov 29 21:00:19 2020 178.176.74.165:40184 peer info: IV_PLAT=linux
+Sun Nov 29 21:00:19 2020 178.176.74.165:40184 peer info: IV_PROTO=2
+Sun Nov 29 21:00:19 2020 178.176.74.165:40184 Control Channel: TLSv1.2, cipher TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384, 2048 bit RSA
+Sun Nov 29 21:00:19 2020 178.176.74.165:40184 [cltest] Peer Connection Initiated with [AF_INET]178.176.74.165:40184
+Sun Nov 29 21:00:19 2020 cltest/178.176.74.165:40184 MULTI_sva: pool returned IPv4=192.168.102.2, IPv6=(Not enabled)
+Sun Nov 29 21:00:19 2020 cltest/178.176.74.165:40184 OPTIONS IMPORT: reading client specific options from: /tmp/openvpn_cc_4db865260003e652f1c30eb0cc22cbc.tmp
+Sun Nov 29 21:00:21 2020 cltest/178.176.74.165:40184 PUSH: Received control message: 'PUSH_REQUEST'
+Sun Nov 29 21:00:21 2020 cltest/178.176.74.165:40184 SENT CONTROL [cltest]: 'PUSH_REPLY,route-gateway 192.168.102.1,ping 2,ping-restart 4,ifconfig 192.168.102.2 255.255.255.0,peer-id 0' (status=1)
+Sun Nov 29 21:00:21 2020 cltest/178.176.74.165:40184 ******* WARNING *******: '--cipher none' was specified. This means NO encryption will be performed and tunnelled data WILL be transmitted in clear text over the network! PLEASE DO RECONSIDER THIS SETTING!
+Sun Nov 29 21:00:21 2020 cltest/178.176.74.165:40184 ******* WARNING *******: '--auth none' was specified. This means no authentication will be performed on received packets, meaning you CANNOT trust that the data received by the remote side have NOT been manipulated. PLEASE DO RECONSIDER THIS SETTING!
+Sun Nov 29 21:02:01 2020 cltest/178.176.74.165:40184 [cltest] Inactivity timeout (--ping-restart), restarting
+Sun Nov 29 21:02:01 2020 cltest/178.176.74.165:40184 SIGUSR1[soft,ping-restart] received, client-instance restarting
+Sun Nov 29 21:03:54 2020 31.173.80.211:61848 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Sun Nov 29 21:03:54 2020 31.173.80.211:61848 TLS: Initial packet from [AF_INET]31.173.80.211:61848, sid=42520892 df209501
+Sun Nov 29 21:03:58 2020 31.173.80.211:61848 TLS Error: TLS key negotiation failed to occur within 4 seconds (check your network connectivity)
+Sun Nov 29 21:03:58 2020 31.173.80.211:61848 TLS Error: TLS handshake failed
+Sun Nov 29 21:03:58 2020 31.173.80.211:61848 SIGUSR1[soft,tls-error] received, client-instance restarting
+Sun Nov 29 21:06:20 2020 31.173.83.145:18651 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Sun Nov 29 21:06:20 2020 31.173.83.145:18651 TLS: Initial packet from [AF_INET]31.173.83.145:18651, sid=c9aa403f 8647dfa5
+Sun Nov 29 21:06:24 2020 31.173.83.145:18651 TLS Error: TLS key negotiation failed to occur within 4 seconds (check your network connectivity)
+Sun Nov 29 21:06:24 2020 31.173.83.145:18651 TLS Error: TLS handshake failed
+Sun Nov 29 21:06:24 2020 31.173.83.145:18651 SIGUSR1[soft,tls-error] received, client-instance restarting
+Sun Nov 29 21:09:16 2020 178.176.78.148:28427 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Sun Nov 29 21:09:16 2020 178.176.78.148:28427 TLS: Initial packet from [AF_INET]178.176.78.148:28427, sid=30a1601a e6cb89a5
+Sun Nov 29 21:09:20 2020 178.176.78.148:28427 TLS Error: TLS key negotiation failed to occur within 4 seconds (check your network connectivity)
+Sun Nov 29 21:09:20 2020 178.176.78.148:28427 TLS Error: TLS handshake failed
+Sun Nov 29 21:09:20 2020 178.176.78.148:28427 SIGUSR1[soft,tls-error] received, client-instance restarting
+Sun Nov 29 21:12:16 2020 178.176.73.145:25148 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Sun Nov 29 21:12:16 2020 178.176.73.145:25148 TLS: Initial packet from [AF_INET]178.176.73.145:25148, sid=ef2a4074 c81c9fe0
+Sun Nov 29 21:12:20 2020 178.176.73.145:25148 TLS Error: TLS key negotiation failed to occur within 4 seconds (check your network connectivity)
+Sun Nov 29 21:12:20 2020 178.176.73.145:25148 TLS Error: TLS handshake failed
+Sun Nov 29 21:12:20 2020 178.176.73.145:25148 SIGUSR1[soft,tls-error] received, client-instance restarting
+Sun Nov 29 21:15:17 2020 31.173.81.221:45564 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Sun Nov 29 21:15:17 2020 31.173.81.221:45564 TLS: Initial packet from [AF_INET]31.173.81.221:45564, sid=c1e64678 99183eda
+Sun Nov 29 21:15:21 2020 31.173.81.221:45564 TLS Error: TLS key negotiation failed to occur within 4 seconds (check your network connectivity)
+Sun Nov 29 21:15:21 2020 31.173.81.221:45564 TLS Error: TLS handshake failed
+Sun Nov 29 21:15:21 2020 31.173.81.221:45564 SIGUSR1[soft,tls-error] received, client-instance restarting
+Sun Nov 29 21:18:16 2020 178.176.73.231:60503 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Sun Nov 29 21:18:16 2020 178.176.73.231:60503 TLS: Initial packet from [AF_INET]178.176.73.231:60503, sid=b1fc8786 9018a2c4
+Sun Nov 29 21:18:20 2020 178.176.73.231:60503 TLS Error: TLS key negotiation failed to occur within 4 seconds (check your network connectivity)
+Sun Nov 29 21:18:20 2020 178.176.73.231:60503 TLS Error: TLS handshake failed
+Sun Nov 29 21:18:20 2020 178.176.73.231:60503 SIGUSR1[soft,tls-error] received, client-instance restarting
+Sun Nov 29 21:21:15 2020 31.173.85.192:55519 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Sun Nov 29 21:21:15 2020 31.173.85.192:55519 TLS: Initial packet from [AF_INET]31.173.85.192:55519, sid=2446b4e7 5b1e2c75
+Sun Nov 29 21:21:19 2020 31.173.85.192:55519 TLS Error: TLS key negotiation failed to occur within 4 seconds (check your network connectivity)
+Sun Nov 29 21:21:19 2020 31.173.85.192:55519 TLS Error: TLS handshake failed
+Sun Nov 29 21:21:19 2020 31.173.85.192:55519 SIGUSR1[soft,tls-error] received, client-instance restarting
+Sun Nov 29 21:24:16 2020 31.173.84.151:13807 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Sun Nov 29 21:24:16 2020 31.173.84.151:13807 TLS: Initial packet from [AF_INET]31.173.84.151:13807, sid=f041c6e7 eca9ef94
+Sun Nov 29 21:24:20 2020 31.173.84.151:13807 TLS Error: TLS key negotiation failed to occur within 4 seconds (check your network connectivity)
+Sun Nov 29 21:24:20 2020 31.173.84.151:13807 TLS Error: TLS handshake failed
+Sun Nov 29 21:24:20 2020 31.173.84.151:13807 SIGUSR1[soft,tls-error] received, client-instance restarting
+Sun Nov 29 21:27:16 2020 178.176.77.23:20848 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Sun Nov 29 21:27:16 2020 178.176.77.23:20848 TLS: Initial packet from [AF_INET]178.176.77.23:20848, sid=b1266a81 b4a223d4
+Sun Nov 29 21:27:20 2020 178.176.77.23:20848 TLS Error: TLS key negotiation failed to occur within 4 seconds (check your network connectivity)
+Sun Nov 29 21:27:20 2020 178.176.77.23:20848 TLS Error: TLS handshake failed
+Sun Nov 29 21:27:20 2020 178.176.77.23:20848 SIGUSR1[soft,tls-error] received, client-instance restarting
+Sun Nov 29 21:30:21 2020 178.176.73.188:15643 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Sun Nov 29 21:30:21 2020 178.176.73.188:15643 TLS: Initial packet from [AF_INET]178.176.73.188:15643, sid=d6510029 c4ca5821
+Sun Nov 29 21:30:24 2020 178.176.73.188:15643 VERIFY OK: depth=1, C=US, ST=CA, L=SanFrancisco, O=Fort-Funston, OU=MyOrganizationalUnit, CN=Fort-Funston CA, name=EasyRSA, emailAddress=me@myhost.mydomain
+Sun Nov 29 21:30:24 2020 178.176.73.188:15643 VERIFY OK: depth=0, C=US, ST=CA, L=SanFrancisco, O=Fort-Funston, OU=MyOrganizationalUnit, CN=cltest, name=EasyRSA, emailAddress=me@myhost.mydomain
+Sun Nov 29 21:30:24 2020 178.176.73.188:15643 peer info: IV_VER=2.3.11
+Sun Nov 29 21:30:24 2020 178.176.73.188:15643 peer info: IV_PLAT=linux
+Sun Nov 29 21:30:24 2020 178.176.73.188:15643 peer info: IV_PROTO=2
+Sun Nov 29 21:30:24 2020 178.176.73.188:15643 Control Channel: TLSv1.2, cipher TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384, 2048 bit RSA
+Sun Nov 29 21:30:24 2020 178.176.73.188:15643 [cltest] Peer Connection Initiated with [AF_INET]178.176.73.188:15643
+Sun Nov 29 21:30:24 2020 cltest/178.176.73.188:15643 MULTI_sva: pool returned IPv4=192.168.102.2, IPv6=(Not enabled)
+Sun Nov 29 21:30:24 2020 cltest/178.176.73.188:15643 OPTIONS IMPORT: reading client specific options from: /tmp/openvpn_cc_41763885a67d392c78f7f349cce424f1.tmp
+Sun Nov 29 21:30:26 2020 cltest/178.176.73.188:15643 PUSH: Received control message: 'PUSH_REQUEST'
+Sun Nov 29 21:30:26 2020 cltest/178.176.73.188:15643 SENT CONTROL [cltest]: 'PUSH_REPLY,route-gateway 192.168.102.1,ping 2,ping-restart 4,ifconfig 192.168.102.2 255.255.255.0,peer-id 0' (status=1)
+Sun Nov 29 21:30:26 2020 cltest/178.176.73.188:15643 ******* WARNING *******: '--cipher none' was specified. This means NO encryption will be performed and tunnelled data WILL be transmitted in clear text over the network! PLEASE DO RECONSIDER THIS SETTING!
+Sun Nov 29 21:30:26 2020 cltest/178.176.73.188:15643 ******* WARNING *******: '--auth none' was specified. This means no authentication will be performed on received packets, meaning you CANNOT trust that the data received by the remote side have NOT been manipulated. PLEASE DO RECONSIDER THIS SETTING!
+Sun Nov 29 21:31:04 2020 cltest/178.176.73.188:15643 [cltest] Inactivity timeout (--ping-restart), restarting
+Sun Nov 29 21:31:04 2020 cltest/178.176.73.188:15643 SIGUSR1[soft,ping-restart] received, client-instance restarting
+Sun Nov 29 21:33:49 2020 31.173.85.12:58716 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Sun Nov 29 21:33:49 2020 31.173.85.12:58716 TLS: Initial packet from [AF_INET]31.173.85.12:58716, sid=89e10954 42762440
+Sun Nov 29 21:33:53 2020 31.173.85.12:58716 TLS Error: TLS key negotiation failed to occur within 4 seconds (check your network connectivity)
+Sun Nov 29 21:33:53 2020 31.173.85.12:58716 TLS Error: TLS handshake failed
+Sun Nov 29 21:33:53 2020 31.173.85.12:58716 SIGUSR1[soft,tls-error] received, client-instance restarting
+Sun Nov 29 21:36:17 2020 178.176.74.222:15131 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Sun Nov 29 21:36:17 2020 178.176.74.222:15131 TLS: Initial packet from [AF_INET]178.176.74.222:15131, sid=9b6a669e c9f144f8
+Sun Nov 29 21:36:21 2020 178.176.74.222:15131 TLS Error: TLS key negotiation failed to occur within 4 seconds (check your network connectivity)
+Sun Nov 29 21:36:21 2020 178.176.74.222:15131 TLS Error: TLS handshake failed
+Sun Nov 29 21:36:21 2020 178.176.74.222:15131 SIGUSR1[soft,tls-error] received, client-instance restarting
+Sun Nov 29 21:39:21 2020 178.176.75.4:47210 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Sun Nov 29 21:39:21 2020 178.176.75.4:47210 TLS: Initial packet from [AF_INET]178.176.75.4:47210, sid=e62295c6 7e91174d
+Sun Nov 29 21:39:25 2020 178.176.75.4:47210 TLS Error: TLS key negotiation failed to occur within 4 seconds (check your network connectivity)
+Sun Nov 29 21:39:25 2020 178.176.75.4:47210 TLS Error: TLS handshake failed
+Sun Nov 29 21:39:25 2020 178.176.75.4:47210 SIGUSR1[soft,tls-error] received, client-instance restarting
+Sun Nov 29 21:42:15 2020 178.176.72.206:29160 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Sun Nov 29 21:42:15 2020 178.176.72.206:29160 TLS: Initial packet from [AF_INET]178.176.72.206:29160, sid=948def52 e73ab6d2
+Sun Nov 29 21:42:20 2020 178.176.72.206:29160 TLS Error: TLS key negotiation failed to occur within 4 seconds (check your network connectivity)
+Sun Nov 29 21:42:20 2020 178.176.72.206:29160 TLS Error: TLS handshake failed
+Sun Nov 29 21:42:20 2020 178.176.72.206:29160 SIGUSR1[soft,tls-error] received, client-instance restarting
+Sun Nov 29 21:45:16 2020 178.176.77.41:44624 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Sun Nov 29 21:45:16 2020 178.176.77.41:44624 TLS: Initial packet from [AF_INET]178.176.77.41:44624, sid=07d8b358 d1e0eec0
+Sun Nov 29 21:45:18 2020 178.176.77.41:44624 VERIFY OK: depth=1, C=US, ST=CA, L=SanFrancisco, O=Fort-Funston, OU=MyOrganizationalUnit, CN=Fort-Funston CA, name=EasyRSA, emailAddress=me@myhost.mydomain
+Sun Nov 29 21:45:18 2020 178.176.77.41:44624 VERIFY OK: depth=0, C=US, ST=CA, L=SanFrancisco, O=Fort-Funston, OU=MyOrganizationalUnit, CN=cltest, name=EasyRSA, emailAddress=me@myhost.mydomain
+Sun Nov 29 21:45:18 2020 178.176.77.41:44624 peer info: IV_VER=2.3.11
+Sun Nov 29 21:45:18 2020 178.176.77.41:44624 peer info: IV_PLAT=linux
+Sun Nov 29 21:45:18 2020 178.176.77.41:44624 peer info: IV_PROTO=2
+Sun Nov 29 21:45:18 2020 178.176.77.41:44624 Control Channel: TLSv1.2, cipher TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384, 2048 bit RSA
+Sun Nov 29 21:45:18 2020 178.176.77.41:44624 [cltest] Peer Connection Initiated with [AF_INET]178.176.77.41:44624
+Sun Nov 29 21:45:18 2020 cltest/178.176.77.41:44624 MULTI_sva: pool returned IPv4=192.168.102.2, IPv6=(Not enabled)
+Sun Nov 29 21:45:18 2020 cltest/178.176.77.41:44624 OPTIONS IMPORT: reading client specific options from: /tmp/openvpn_cc_2477e4ee7ae75abc7db424cad51abb8f.tmp
+Sun Nov 29 21:45:21 2020 cltest/178.176.77.41:44624 PUSH: Received control message: 'PUSH_REQUEST'
+Sun Nov 29 21:45:21 2020 cltest/178.176.77.41:44624 SENT CONTROL [cltest]: 'PUSH_REPLY,route-gateway 192.168.102.1,ping 2,ping-restart 4,ifconfig 192.168.102.2 255.255.255.0,peer-id 0' (status=1)
+Sun Nov 29 21:45:21 2020 cltest/178.176.77.41:44624 ******* WARNING *******: '--cipher none' was specified. This means NO encryption will be performed and tunnelled data WILL be transmitted in clear text over the network! PLEASE DO RECONSIDER THIS SETTING!
+Sun Nov 29 21:45:21 2020 cltest/178.176.77.41:44624 ******* WARNING *******: '--auth none' was specified. This means no authentication will be performed on received packets, meaning you CANNOT trust that the data received by the remote side have NOT been manipulated. PLEASE DO RECONSIDER THIS SETTING!
+Sun Nov 29 21:45:48 2020 cltest/178.176.77.41:44624 MULTI: Learn: 86:60:d8:3c:7a:23 -> cltest/178.176.77.41:44624
+Sun Nov 29 21:45:56 2020 cltest/178.176.77.41:44624 [cltest] Inactivity timeout (--ping-restart), restarting
+Sun Nov 29 21:45:56 2020 cltest/178.176.77.41:44624 SIGUSR1[soft,ping-restart] received, client-instance restarting
+Sun Nov 29 21:48:50 2020 178.176.79.228:11281 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Sun Nov 29 21:48:50 2020 178.176.79.228:11281 TLS: Initial packet from [AF_INET]178.176.79.228:11281, sid=f72953b9 6de606f7
+Sun Nov 29 21:48:54 2020 178.176.79.228:11281 TLS Error: TLS key negotiation failed to occur within 4 seconds (check your network connectivity)
+Sun Nov 29 21:48:54 2020 178.176.79.228:11281 TLS Error: TLS handshake failed
+Sun Nov 29 21:48:54 2020 178.176.79.228:11281 SIGUSR1[soft,tls-error] received, client-instance restarting
+Sun Nov 29 21:51:15 2020 178.176.72.76:20136 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Sun Nov 29 21:51:15 2020 178.176.72.76:20136 TLS: Initial packet from [AF_INET]178.176.72.76:20136, sid=e791edfb 3b5573b5
+Sun Nov 29 21:51:18 2020 178.176.72.76:20136 VERIFY OK: depth=1, C=US, ST=CA, L=SanFrancisco, O=Fort-Funston, OU=MyOrganizationalUnit, CN=Fort-Funston CA, name=EasyRSA, emailAddress=me@myhost.mydomain
+Sun Nov 29 21:51:18 2020 178.176.72.76:20136 VERIFY OK: depth=0, C=US, ST=CA, L=SanFrancisco, O=Fort-Funston, OU=MyOrganizationalUnit, CN=cltest, name=EasyRSA, emailAddress=me@myhost.mydomain
+Sun Nov 29 21:51:18 2020 178.176.72.76:20136 peer info: IV_VER=2.3.11
+Sun Nov 29 21:51:18 2020 178.176.72.76:20136 peer info: IV_PLAT=linux
+Sun Nov 29 21:51:18 2020 178.176.72.76:20136 peer info: IV_PROTO=2
+Sun Nov 29 21:51:18 2020 178.176.72.76:20136 Control Channel: TLSv1.2, cipher TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384, 2048 bit RSA
+Sun Nov 29 21:51:18 2020 178.176.72.76:20136 [cltest] Peer Connection Initiated with [AF_INET]178.176.72.76:20136
+Sun Nov 29 21:51:18 2020 cltest/178.176.72.76:20136 MULTI_sva: pool returned IPv4=192.168.102.2, IPv6=(Not enabled)
+Sun Nov 29 21:51:18 2020 cltest/178.176.72.76:20136 OPTIONS IMPORT: reading client specific options from: /tmp/openvpn_cc_e870b20fd09ef8e63e1b2a29a9a6903.tmp
+Sun Nov 29 21:51:20 2020 cltest/178.176.72.76:20136 PUSH: Received control message: 'PUSH_REQUEST'
+Sun Nov 29 21:51:20 2020 cltest/178.176.72.76:20136 SENT CONTROL [cltest]: 'PUSH_REPLY,route-gateway 192.168.102.1,ping 2,ping-restart 4,ifconfig 192.168.102.2 255.255.255.0,peer-id 0' (status=1)
+Sun Nov 29 21:51:20 2020 cltest/178.176.72.76:20136 ******* WARNING *******: '--cipher none' was specified. This means NO encryption will be performed and tunnelled data WILL be transmitted in clear text over the network! PLEASE DO RECONSIDER THIS SETTING!
+Sun Nov 29 21:51:20 2020 cltest/178.176.72.76:20136 ******* WARNING *******: '--auth none' was specified. This means no authentication will be performed on received packets, meaning you CANNOT trust that the data received by the remote side have NOT been manipulated. PLEASE DO RECONSIDER THIS SETTING!
+Sun Nov 29 21:52:14 2020 cltest/178.176.72.76:20136 [cltest] Inactivity timeout (--ping-restart), restarting
+Sun Nov 29 21:52:14 2020 cltest/178.176.72.76:20136 SIGUSR1[soft,ping-restart] received, client-instance restarting
+Sun Nov 29 21:57:19 2020 31.173.86.142:37997 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Sun Nov 29 21:57:19 2020 31.173.86.142:37997 TLS: Initial packet from [AF_INET]31.173.86.142:37997, sid=8d2e1d74 61f7b2a2
+Sun Nov 29 21:57:23 2020 31.173.86.142:37997 TLS Error: TLS key negotiation failed to occur within 4 seconds (check your network connectivity)
+Sun Nov 29 21:57:23 2020 31.173.86.142:37997 TLS Error: TLS handshake failed
+Sun Nov 29 21:57:23 2020 31.173.86.142:37997 SIGUSR1[soft,tls-error] received, client-instance restarting
+Sun Nov 29 22:00:16 2020 178.176.73.123:63377 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Sun Nov 29 22:00:16 2020 178.176.73.123:63377 TLS: Initial packet from [AF_INET]178.176.73.123:63377, sid=68532f1f dedd99db
+Sun Nov 29 22:00:20 2020 178.176.73.123:63377 TLS Error: TLS key negotiation failed to occur within 4 seconds (check your network connectivity)
+Sun Nov 29 22:00:20 2020 178.176.73.123:63377 TLS Error: TLS handshake failed
+Sun Nov 29 22:00:20 2020 178.176.73.123:63377 SIGUSR1[soft,tls-error] received, client-instance restarting
+Sun Nov 29 22:03:16 2020 178.176.72.102:56179 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Sun Nov 29 22:03:16 2020 178.176.72.102:56179 TLS: Initial packet from [AF_INET]178.176.72.102:56179, sid=c09b5519 f9d9d1a9
+Sun Nov 29 22:03:21 2020 178.176.72.102:56179 TLS Error: TLS key negotiation failed to occur within 4 seconds (check your network connectivity)
+Sun Nov 29 22:03:21 2020 178.176.72.102:56179 TLS Error: TLS handshake failed
+Sun Nov 29 22:03:21 2020 178.176.72.102:56179 SIGUSR1[soft,tls-error] received, client-instance restarting

@@ -1,0 +1,20 @@
+Tue Dec 20 14:20:02 2022 WARNING: file 'server.key' is group or others accessible
+Tue Dec 20 14:20:02 2022 OpenVPN 2.4.4 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Mar 22 2022
+Tue Dec 20 14:20:02 2022 library versions: OpenSSL 1.1.1  11 Sep 2018, LZO 2.08
+Tue Dec 20 14:20:02 2022 NOTE: the current --script-security setting may allow this configuration to call user-defined scripts
+Tue Dec 20 14:20:02 2022 Diffie-Hellman initialized with 2048 bit key
+Tue Dec 20 14:20:02 2022 ******* WARNING *******: '--cipher none' was specified. This means NO encryption will be performed and tunnelled data WILL be transmitted in clear text over the network! PLEASE DO RECONSIDER THIS SETTING!
+Tue Dec 20 14:20:02 2022 ******* WARNING *******: '--auth none' was specified. This means no authentication will be performed on received packets, meaning you CANNOT trust that the data received by the remote side have NOT been manipulated. PLEASE DO RECONSIDER THIS SETTING!
+Tue Dec 20 14:20:02 2022 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Tue Dec 20 14:20:02 2022 TUN/TAP device tap4 opened
+Tue Dec 20 14:20:02 2022 TUN/TAP TX queue length set to 100
+Tue Dec 20 14:20:02 2022 do_ifconfig, tt->did_ifconfig_ipv6_setup=0
+Tue Dec 20 14:20:02 2022 /sbin/ip link set dev tap4 up mtu 1399
+Tue Dec 20 14:20:02 2022 /sbin/ip addr add dev tap4 192.168.104.1/24 broadcast 192.168.104.255
+Tue Dec 20 14:20:02 2022 Could not determine IPv4/IPv6 protocol. Using AF_INET
+Tue Dec 20 14:20:02 2022 Socket Buffers: R=[212992->425984] S=[212992->425984]
+Tue Dec 20 14:20:02 2022 UDPv4 link local (bound): [AF_INET][undef]:1604
+Tue Dec 20 14:20:02 2022 UDPv4 link remote: [AF_UNSPEC]
+Tue Dec 20 14:20:02 2022 MULTI: multi_init called, r=256 v=256
+Tue Dec 20 14:20:02 2022 IFCONFIG POOL: base=192.168.104.2 size=253, ipv6=0
+Tue Dec 20 14:20:02 2022 Initialization Sequence Completed

@@ -1,0 +1,52 @@
+Sun Nov 29 21:00:02 2020 WARNING: file 'server.key' is group or others accessible
+Sun Nov 29 21:00:02 2020 OpenVPN 2.4.4 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on May 27 2020
+Sun Nov 29 21:00:02 2020 library versions: OpenSSL 1.1.1  11 Sep 2018, LZO 2.08
+Sun Nov 29 21:00:02 2020 NOTE: the current --script-security setting may allow this configuration to call user-defined scripts
+Sun Nov 29 21:00:02 2020 Diffie-Hellman initialized with 2048 bit key
+Sun Nov 29 21:00:02 2020 ******* WARNING *******: '--cipher none' was specified. This means NO encryption will be performed and tunnelled data WILL be transmitted in clear text over the network! PLEASE DO RECONSIDER THIS SETTING!
+Sun Nov 29 21:00:02 2020 ******* WARNING *******: '--auth none' was specified. This means no authentication will be performed on received packets, meaning you CANNOT trust that the data received by the remote side have NOT been manipulated. PLEASE DO RECONSIDER THIS SETTING!
+Sun Nov 29 21:00:02 2020 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Sun Nov 29 21:00:02 2020 TUN/TAP device tap1 opened
+Sun Nov 29 21:00:02 2020 TUN/TAP TX queue length set to 100
+Sun Nov 29 21:00:02 2020 do_ifconfig, tt->did_ifconfig_ipv6_setup=0
+Sun Nov 29 21:00:02 2020 /sbin/ip link set dev tap1 up mtu 1399
+Sun Nov 29 21:00:02 2020 /sbin/ip addr add dev tap1 192.168.101.1/24 broadcast 192.168.101.255
+Sun Nov 29 21:00:02 2020 Could not determine IPv4/IPv6 protocol. Using AF_INET
+Sun Nov 29 21:00:02 2020 Socket Buffers: R=[65536->7864320] S=[65536->7864320]
+Sun Nov 29 21:00:02 2020 UDPv4 link local (bound): [AF_INET][undef]:1601
+Sun Nov 29 21:00:02 2020 UDPv4 link remote: [AF_UNSPEC]
+Sun Nov 29 21:00:02 2020 UID set to root
+Sun Nov 29 21:00:02 2020 MULTI: multi_init called, r=256 v=256
+Sun Nov 29 21:00:02 2020 IFCONFIG POOL: base=192.168.101.2 size=253, ipv6=0
+Sun Nov 29 21:00:02 2020 Initialization Sequence Completed
+Sun Nov 29 21:00:07 2020 188.170.82.72:25731 WARNING: normally if you use --mssfix and/or --fragment, you should also set --tun-mtu 1500 (currently it is 1399)
+Sun Nov 29 21:00:07 2020 188.170.82.72:25731 TLS: Initial packet from [AF_INET]188.170.82.72:25731, sid=55d52870 96e60050
+Sun Nov 29 21:00:07 2020 188.170.82.72:25731 VERIFY OK: depth=1, C=US, ST=CA, L=SanFrancisco, O=Fort-Funston, OU=MyOrganizationalUnit, CN=Fort-Funston CA, name=EasyRSA, emailAddress=me@myhost.mydomain
+Sun Nov 29 21:00:07 2020 188.170.82.72:25731 VERIFY OK: depth=0, C=US, ST=CA, L=SanFrancisco, O=Fort-Funston, OU=MyOrganizationalUnit, CN=cltest, name=EasyRSA, emailAddress=me@myhost.mydomain
+Sun Nov 29 21:00:07 2020 188.170.82.72:25731 peer info: IV_VER=2.3.11
+Sun Nov 29 21:00:07 2020 188.170.82.72:25731 peer info: IV_PLAT=linux
+Sun Nov 29 21:00:07 2020 188.170.82.72:25731 peer info: IV_PROTO=2
+Sun Nov 29 21:00:07 2020 188.170.82.72:25731 Control Channel: TLSv1.2, cipher TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384, 2048 bit RSA
+Sun Nov 29 21:00:07 2020 188.170.82.72:25731 [cltest] Peer Connection Initiated with [AF_INET]188.170.82.72:25731
+Sun Nov 29 21:00:07 2020 cltest/188.170.82.72:25731 MULTI_sva: pool returned IPv4=192.168.101.2, IPv6=(Not enabled)
+Sun Nov 29 21:00:08 2020 cltest/188.170.82.72:25731 OPTIONS IMPORT: reading client specific options from: /tmp/openvpn_cc_68aee6a6e1e50cd97c81771eb1248e70.tmp
+Sun Nov 29 21:00:10 2020 cltest/188.170.82.72:25731 Key [AF_INET]188.170.82.72:25731 [0] not initialized (yet), dropping packet.
+Sun Nov 29 21:00:10 2020 cltest/188.170.82.72:25731 PUSH: Received control message: 'PUSH_REQUEST'
+Sun Nov 29 21:00:10 2020 cltest/188.170.82.72:25731 SENT CONTROL [cltest]: 'PUSH_REPLY,route-gateway 192.168.101.1,ping 2,ping-restart 4,ifconfig 192.168.101.2 255.255.255.0,peer-id 0' (status=1)
+Sun Nov 29 21:00:10 2020 cltest/188.170.82.72:25731 ******* WARNING *******: '--cipher none' was specified. This means NO encryption will be performed and tunnelled data WILL be transmitted in clear text over the network! PLEASE DO RECONSIDER THIS SETTING!
+Sun Nov 29 21:00:10 2020 cltest/188.170.82.72:25731 ******* WARNING *******: '--auth none' was specified. This means no authentication will be performed on received packets, meaning you CANNOT trust that the data received by the remote side have NOT been manipulated. PLEASE DO RECONSIDER THIS SETTING!
+Sun Nov 29 21:02:43 2020 cltest/188.170.82.72:25731 MULTI: Learn: 6a:67:a7:28:23:55 -> cltest/188.170.82.72:25731
+Sun Nov 29 21:58:26 2020 cltest/188.170.82.72:25731 TLS: new session incoming connection from [AF_INET]188.170.82.72:25731
+Sun Nov 29 21:58:27 2020 cltest/188.170.82.72:25731 VERIFY OK: depth=1, C=US, ST=CA, L=SanFrancisco, O=Fort-Funston, OU=MyOrganizationalUnit, CN=Fort-Funston CA, name=EasyRSA, emailAddress=me@myhost.mydomain
+Sun Nov 29 21:58:27 2020 cltest/188.170.82.72:25731 VERIFY OK: depth=0, C=US, ST=CA, L=SanFrancisco, O=Fort-Funston, OU=MyOrganizationalUnit, CN=cltest, name=EasyRSA, emailAddress=me@myhost.mydomain
+Sun Nov 29 21:58:27 2020 cltest/188.170.82.72:25731 peer info: IV_VER=2.3.11
+Sun Nov 29 21:58:27 2020 cltest/188.170.82.72:25731 peer info: IV_PLAT=linux
+Sun Nov 29 21:58:27 2020 cltest/188.170.82.72:25731 peer info: IV_PROTO=2
+Sun Nov 29 21:58:27 2020 cltest/188.170.82.72:25731 TLS: move_session: dest=TM_ACTIVE src=TM_UNTRUSTED reinit_src=1
+Sun Nov 29 21:58:27 2020 cltest/188.170.82.72:25731 TLS: tls_multi_process: untrusted session promoted to semi-trusted
+Sun Nov 29 21:58:27 2020 cltest/188.170.82.72:25731 Control Channel: TLSv1.2, cipher TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384, 2048 bit RSA
+Sun Nov 29 21:58:29 2020 cltest/188.170.82.72:25731 Key [AF_INET]188.170.82.72:25731 [0] not initialized (yet), dropping packet.
+Sun Nov 29 21:58:29 2020 cltest/188.170.82.72:25731 PUSH: Received control message: 'PUSH_REQUEST'
+Sun Nov 29 21:58:29 2020 cltest/188.170.82.72:25731 SENT CONTROL [cltest]: 'PUSH_REPLY,route-gateway 192.168.101.1,ping 2,ping-restart 4,ifconfig 192.168.101.2 255.255.255.0,peer-id 0' (status=1)
+Sun Nov 29 21:58:29 2020 cltest/188.170.82.72:25731 ******* WARNING *******: '--cipher none' was specified. This means NO encryption will be performed and tunnelled data WILL be transmitted in clear text over the network! PLEASE DO RECONSIDER THIS SETTING!
+Sun Nov 29 21:58:29 2020 cltest/188.170.82.72:25731 ******* WARNING *******: '--auth none' was specified. This means no authentication will be performed on received packets, meaning you CANNOT trust that the data received by the remote side have NOT been manipulated. PLEASE DO RECONSIDER THIS SETTING!
