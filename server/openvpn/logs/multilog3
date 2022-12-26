@@ -1,1 +1,0 @@
-multitail -n 1 -f openvpn21.log -n 1 -f openvpn22.log -n 1 -f openvpn23.log -n 1 -f openvpn24.log -n 1 -f openvpn25.log -n 1 -f openvpn26.log -n 1 -f openvpn27.log -n 1 -f openvpn28.log -n 1 -f openvpn29.log -n 1 -f openvpn30.log
