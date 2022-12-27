@@ -14,3 +14,11 @@
 
 
 ![Architecture](images/sms-manager.png)
+
+
+## Установка
+
+Установка sms-manager состоит из нескольких вещей:
+
+- [Прошивка модема](firmware/README.md)
+- [Настройка сервера](server/README.md)
