@@ -13,7 +13,7 @@
 
 
 
-![Architecture](images/sms-manager.png)
+![Architecture](test/sms-manager.png)
 
 
 ## Установка
@@ -22,3 +22,4 @@
 
 - [Прошивка модема](firmware/README.md)
 - [Настройка сервера](server/README.md)
+- [Тестирование](test/README.md)
