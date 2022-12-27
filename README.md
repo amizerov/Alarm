@@ -10,14 +10,5 @@
 
 > На рисунке изображены связи участников схемы между собой
 
-
-
-
-
-
-
-
-
-
-
+![sms-manager](https://user-images.githubusercontent.com/121182772/209685197-a58e2dcf-62d0-435f-819e-dd339cfa5588.png)
 
