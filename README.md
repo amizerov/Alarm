@@ -12,3 +12,4 @@
 
 
 
+![Architecture](images/sms-manager.png)
