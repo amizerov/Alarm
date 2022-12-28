@@ -2,7 +2,7 @@
 
 Подключаемся на сервер и устанавливаем сервер **openvpn** а также некоторые необходимые нам пакеты
 
-`apt install openvpn p7zip-full zip dialog nano git screen jq -y`
+`apt install openvpn p7zip-full zip dialog nano git screen jq golang -y`
 
 Разархивируем и копируем папку openvpn в /etc/openvpn (пароль на архив - 1)
 
@@ -21,6 +21,12 @@ chmod +x /etc/openvpn/stopscripts/*
 systemctl daemon-reload
 
 systemctl restart openvpn
+
+### Установка hilink
+
+cd /tmp ; git clone https://github.com/kenshaw/hilink.git ; cd hilink/
+go get -u github.com/kenshaw/hilink/cmd/hlcli
+
 
 ### Установка sms-manager
 
