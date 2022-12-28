@@ -59,6 +59,8 @@ for PHONENUMBER in $PHONENUMBERS
 do
 	echo "Выявлен номер $PHONENUMBER поэтому мы дергаем ссылку https://api.mizerov.com/Log?msg=$PHONENUMBER"
 	curl "$URL=$PHONENUMBER" &> /dev/null
+	# Здесь нужно дописать команду выполняющую стоп виртуалки по ssh на хосте ESXI
+	
 done
 }
 
