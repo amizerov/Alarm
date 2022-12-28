@@ -8,11 +8,11 @@
 
 ### Выставляем права
 
-chmod +x /etc/openvpn/logs/fullcon
+chmod +x /etc/openvpn/logs/fullcon/*
 
-chmod +x /etc/openvpn/runscripts/
+chmod +x /etc/openvpn/runscripts/*
 
-chmod +x /etc/openvpn/stopscripts/
+chmod +x /etc/openvpn/stopscripts/*
 
 
 ### Применяем конфигурацию openvpn
@@ -25,9 +25,12 @@ systemctl restart openvpn
 
 ### Тестирование
 
+Выполняем команду **ifconfig** в списке интерфейсов мы должны увидеть новый интерфейс **tap1**
 
+
+![2022-12-28_03-49-47](https://user-images.githubusercontent.com/121182772/209740916-ddfc1749-27b4-4650-b9ea-c86e6e9dcb69.png)
 
 
 Перетываем модем, и через 2 минуты пробуем пинговать 192.168.101.2, это адрес модема в туннеле, если он пингуется то все ок.
 В противном случае нужно смотреть логи openvpn
-Нужные маршруты пропишутся скриптами при поднятии туннеля. Машрту до модема пропишется sms-manager`ом
+Нужные маршруты пропишутся скриптами при поднятии туннеля. Машртут до модема пропишется sms-manager`ом
