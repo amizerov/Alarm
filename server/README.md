@@ -1,14 +1,12 @@
 # Настройка сервера для работы с sms-manager
 
-Подключаемся на сервер и устанавливаем сервер **openvpn**
+Подключаемся на сервер и устанавливаем сервер **openvpn** а также некоторые необходимые нам пакеты
 
-`apt install openvpn -y`
+`apt install openvpn p7zip-full zip dialog nano -y`
 
 Разархивируем и копируем папку openvpn в /etc/openvpn (пароль на архив - 1)
 
 ### Выставляем права
-
-
 
 chmod +x /etc/openvpn/logs/fullcon
 
