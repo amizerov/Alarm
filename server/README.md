@@ -8,16 +8,20 @@
 
 ### Выставляем права
 
-chmod +x /etc/openvpn/logs/mult*
-chmod +x /etc/openvpn/logs/fullcon*
-chmod +x /etc/openvpn/runscripts/*
-chmod +x /etc/openvpn/stopscripts/*
+
+
+chmod +x /etc/openvpn/logs/fullcon
+
+chmod +x /etc/openvpn/runscripts/
+
+chmod +x /etc/openvpn/stopscripts/
 
 
 ### Применяем конфигурацию openvpn
 
 
 systemctl daemon-reload
+
 systemctl restart openvpn
 
 
