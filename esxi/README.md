@@ -1,7 +1,18 @@
-# Sms-Manager
-## Управление виртуалками в Vmware ESXI через смс
+# Vmware Esxi - Управление виртуалками по ssh
 
-> Sms-Manager представляет собой набор скриптов, объединенных в демон непрерывно работающий в Linux, управление которым происходит с помощью смс.
+## Подключение по ssh
+
+> Для того чтобы включить доступ к серверу Vmware Esxi нужно воспользоваться по идее статьей в базе знаний vmware 
+
+https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-DFA67697-232E-4F7D-860F-96C0819570A8.html
+https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-DFA67697-232E-4F7D-860F-96C0819570A8.html
+https://kb.vmware.com/s/article/8375637
+
+Но все гораздо проще, находясь в вебинтерфейсе нужно сделать клик как я показал стрелками на рисунке
+
+![2023-01-19_02-36-50](https://user-images.githubusercontent.com/121182772/213319053-4644fc62-8caf-4a21-9a1e-e0f3a8f6781a.png)
+
+
 > Смс пользователь отправляет с мобильного телефона, а принимает их типичный для таких сценариев [Huawei e3372h](https://market.yandex.ru/product--4g-lte-modem-huawei-e3372h-320/667862013?cpa=1) прошитый специальным образом
  
  
