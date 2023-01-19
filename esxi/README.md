@@ -26,11 +26,11 @@ https://kb.vmware.com/s/article/8375637
 
 ### Устанавливаем переменные окружения
 
-`ESXISERVER="hertz3.svr.vc"`
+`ESXISERVER="hertz3.local"`
 
 `ESXIUSER="cloud"`
 
-`ESXIPASS="Kz5~8gnVNWoG9ChD"`
+`ESXIPASS="5tgbfghG%"`
 
 ### Тестируем подключение
 
@@ -74,15 +74,19 @@ https://kb.vmware.com/s/article/8375637
 
 Вот фрагмент кода на bash, где я проверяю состояние виртуалки
 
+```bash
 #!/bin/bash
 
-ESXISERVER="hertz3.svr.vc"
+ESXISERVER="hertz3.local"
 ESXIUSER="cloud"
-ESXIPASS="Kz5~8gnVNWoG9ChD"
+ESXIPASS="5tgbfghG%"
 
 result=`sshpass -p $ESXIPASS ssh -o StrictHostKeyChecking=no $ESXIUSER@$ESXISERVER "vim-cmd vmsvc/power.getstate 90" | grep Powered`
 echo $result
+```
 
 Переменная $result теперь может иметь строковое значение Powered off или Powered on, любое другое мы должны трактовать как ошибку. 
+
+
 
 
