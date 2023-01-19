@@ -40,13 +40,49 @@ https://kb.vmware.com/s/article/8375637
 
 ![2023-01-19_02-58-00](https://user-images.githubusercontent.com/121182772/213323693-e19ec0c0-793b-43c8-87cf-f62b5a130e49.png)
 
-### Получаем список виртуалок
+### Управление виртуалками в консоли Vmware Esxi
 
 Управление виртуалками в консоли Vmware Esxi осуществляется с помощью утилиты vim-cmd, подробно это описано в [Базе знаний](https://kb.vmware.com/s/article/1004340)
 
 Получаем список виртуалок (сначала в консоли Esxi)
 
 
+![2023-01-19_03-04-22](https://user-images.githubusercontent.com/121182772/213324652-a7e09a7b-9159-4232-b81f-ce2ffa0b4d8c.png)
 
+Как видно на скрине у каждой виртуалки есть свой ID, оперируя им мы можем запросить/изменить состояние любой из машин, например для виртуалки example-for-test-http-api-with-bash с id это выглядит так:
+
+`vim-cmd vmsvc/power.getstate 90`
+`vim-cmd vmsvc/power.on 90`
+
+
+![2023-01-19_03-09-07](https://user-images.githubusercontent.com/121182772/213325125-6ee61d49-0c41-47e4-a339-267252a4d61e.png)
+
+На примере выше мы запросили состояние виртуалки с id 90, включили ее, и опять запросили состояние
+
+### Управление виртуалками по ssh
+
+Скомбинируя описанные ранее команды получаем состояние виртуалки с id 90 по ssh
+
+`sshpass -p $ESXIPASS ssh -o StrictHostKeyChecking=no $ESXIUSER@$ESXISERVER "vim-cmd vmsvc/power.getstate 90"`
+
+![2023-01-19_03-15-41](https://user-images.githubusercontent.com/121182772/213325817-09e37f19-a4a6-4cc0-874d-7218d74465af.png)
+
+
+### Управление по ssh из кода
+
+Для того чтобы использовать описанные выше способы в разработке нужно поднять сессию ssh средствами того языка, на котором мы пишем и выполнять команды как локальные на сервере Esxi, а вывод команд парсить. 
+
+Вот фрагмент кода на bash, где я проверяю состояние виртуалки
+
+#!/bin/bash
+
+ESXISERVER="hertz3.svr.vc"
+ESXIUSER="cloud"
+ESXIPASS="Kz5~8gnVNWoG9ChD"
+
+result=`sshpass -p $ESXIPASS ssh -o StrictHostKeyChecking=no $ESXIUSER@$ESXISERVER "vim-cmd vmsvc/power.getstate 90" | grep Powered`
+echo $result
+
+Переменная $result теперь может иметь строковое значение Powered off или Powered on, любое другое мы должны трактовать как ошибку. 
 
 
