@@ -13,7 +13,7 @@
 
 
 
-![Architecture](test/sms-manager.png)
+![Architecture](test/sms-manager.jpg)
 
 ## Требования
 
