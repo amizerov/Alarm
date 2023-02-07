@@ -14,7 +14,7 @@ SMSSTARTCOUNT="40000"
 
 ESXISERVER="hertz2.svr.vc"
 ESXIUSER="cloud"
-ESXIPASS="5tgbfghG%"
+ESXIPASS="5tgbfghG%45tgih45gohe"
 ESXIVMID="7"         ########## Please run vim-cmd vmsvc/getallvms in esxi server and set vmid this
 
 
