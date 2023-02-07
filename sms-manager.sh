@@ -9,15 +9,26 @@ TIME=`date "+%T"`
 URL="https://api.mizerov.com/Log?msg"
 SMSSTARTCOUNT="40000"
 
-#alias BREAKLINE='echo -en "\n" | te'
+######   ESXI Server Variable #####
+
+
+ESXISERVER="hertz2.svr.vc"
+ESXIUSER="cloud"
+ESXIPASS="5tgbfghG%"
+ESXIVMID="7"         ########## Please run vim-cmd vmsvc/getallvms in esxi server and set vmid this
+
+
+######   ESXI Server Variable #####
+
+
+#alias BREAKLINE=`echo -en '\n'`
 
 
 #clear
 # break line
-echo -en "\n"
+echo -en '\n'
 echo "Скрипт запущен в $TIME"
-# break line
-echo -en "\n"
+echo -en '\n'
 echo "Настраиваем маршрутизацию"
 
 
@@ -58,9 +69,11 @@ numbers (){
 for PHONENUMBER in $PHONENUMBERS
 do
 	echo "Выявлен номер $PHONENUMBER поэтому мы дергаем ссылку https://api.mizerov.com/Log?msg=$PHONENUMBER"
-	curl "$URL=$PHONENUMBER" &> /dev/null
-	# Здесь нужно дописать команду выполняющую стоп виртуалки по ssh на хосте ESXI
-	
+	curl "$URL=$PHONENUMBER"
+	echo -en '\n'
+	echo "Отправляем на ESXI сервер команду потушить виртуалку"
+	result=`sshpass -p $ESXIPASS ssh -o StrictHostKeyChecking=no $ESXIUSER@$ESXISERVER "vim-cmd vmsvc/power.off $ESXIVMID"`
+	echo $result
 done
 }
 

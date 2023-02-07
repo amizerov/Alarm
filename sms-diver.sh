@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SOURCE=/opt/sms
+SOURCE=/opt/Alarm
 CMD=sms-manager.sh
 NOHUP=$SOURCE/nohup.out
 SLP=30
