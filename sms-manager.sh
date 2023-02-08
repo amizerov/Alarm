@@ -6,7 +6,7 @@ SEARCHSTRING1="9226710368"
 SEARCHSTRING2="9253440222"
 SEARCHSTRING3="9771659412"
 TIME=`date "+%T"`
-URL="https://api.mizerov.com/Log?msg"
+URL="https://api.mizerov.com/Alarm?msg"
 SMSSTARTCOUNT="40000"
 
 ######   ESXI Server Variable #####
@@ -14,7 +14,7 @@ SMSSTARTCOUNT="40000"
 
 ESXISERVER="hertz2.svr.vc"
 ESXIUSER="cloud"
-ESXIPASS="5tgbfghG%"
+ESXIPASS="5tgbfghG%45tgih45gohe"
 ESXIVMID="7"         ########## Please run vim-cmd vmsvc/getallvms in esxi server and set vmid this
 
 
@@ -68,7 +68,7 @@ numbers (){
 
 for PHONENUMBER in $PHONENUMBERS
 do
-	echo "Выявлен номер $PHONENUMBER поэтому мы дергаем ссылку https://api.mizerov.com/Log?msg=$PHONENUMBER"
+	echo "Выявлен номер $PHONENUMBER поэтому мы дергаем ссылку $URL=$PHONENUMBER"
 	curl "$URL=$PHONENUMBER"
 	echo -en '\n'
 	echo "Отправляем на ESXI сервер команду потушить виртуалку"
