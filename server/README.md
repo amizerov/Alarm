@@ -30,8 +30,8 @@ go get -u github.com/kenshaw/hilink/cmd/hlcli
 
 ### Установка sms-manager
 
-mkdir /opt/sms ; cd /tmp ; git clone https://github.com/amizerov/Alarm.git
-cd Alarm/ ; cp sms-* /opt/sms/ ; cd /opt/sms/
+mkdir /opt/Alarm ; cd /tmp ; git clone https://github.com/amizerov/Alarm.git
+cd Alarm/ ; cp sms-* /opt/Alarm/ ; cd /opt/Alarm/
 
 Здесь мы должны запустить фоновый процесс sms-manager, для этого запускаем отдельную сессию
 
@@ -39,12 +39,17 @@ screen
 
 В этой сессии запускаем фоновый процесс
 
-bash -x sms-diver.sh
+bash sms-diver.sh | logger -t sms-manager
 
 Теперь выходим из этой сесии нажав Cntrl + A и Cntrl + D. Вернуться в эту сессию мы всегда можем запустив 
 
 screen -r
 
+Посмотреть лог скрипта можно, отфильтровав его в сислоге
+
+```
+tail -f /var/log/syslog | grep sms-manager
+```
 
 
 ### Тестирование
