@@ -4,6 +4,8 @@
 
 `apt install openvpn p7zip-full zip dialog nano git screen jq golang -y`
 
+```apt install openvpn p7zip-full zip dialog nano git screen jq golang -y```
+
 Разархивируем и копируем папку openvpn в /etc/openvpn (пароль на архив - 1)
 
 ### Выставляем права
