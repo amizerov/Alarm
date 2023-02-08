@@ -2,9 +2,6 @@
 
 LOG="/var/log/sms.log"
 MODEM=9
-SEARCHSTRING1="9226710368"
-SEARCHSTRING2="9253440222"
-SEARCHSTRING3="9771659412"
 TIME=`date "+%T"`
 URL="https://api.mizerov.com/Alarm?msg"
 SMSSTARTCOUNT="40000"
@@ -35,15 +32,13 @@ echo "Настраиваем маршрутизацию"
 ip r a 192.168.8.1 dev tap$MODEM &>/dev/null
 ip r c 192.168.8.1 dev tap$MODEM &>/dev/null
 
-echo  "Получаем список смс и парсим их на предмет наличия вхождений $SEARCHSTRING1 $SEARCHSTRING2 и $SEARCHSTRING3"
+echo  "Получаем список смс"
 
 
-
-CONTENT=`hlcli SmsList -boxType 1 -count 10 -page 1 -endpoint http://192.168.8.1 |  grep -E "$SEARCHSTRING1|$SEARCHSTRING2|$SEARCHSTRING3"`
+CONTENT=`hlcli SmsList -boxType 1 -count 10 -page 1 -endpoint http://192.168.8.1`
 PHONENUMBERS=`hlcli SmsList -boxType 1 -count 10 -page 1 -endpoint http://192.168.8.1 | grep "Phone" | cut -d ":" -f2 | cut -d '"' -f2 | grep "+" | sort -n | uniq`
 SMSCOUNT=`hlcli SmsList -boxType 1 -count 10 -page 1 -endpoint http://192.168.8.1 | jq '.Count' -r`
 
-# exit 0
 
 smsclear (){
 
@@ -59,8 +54,6 @@ do
 	SMSID=$(( $SMSID + 1 ))
 done
 
-
-
 }
 
 
@@ -69,13 +62,14 @@ numbers (){
 for PHONENUMBER in $PHONENUMBERS
 do
 	echo "Выявлен номер $PHONENUMBER поэтому мы дергаем ссылку $URL=$PHONENUMBER"
-	curl "$URL=$PHONENUMBER"
+	curl "$URL=$PHONENUMBER" -s > /dev/null
 	echo -en '\n'
 	#echo "Отправляем на ESXI сервер команду потушить виртуалку"
 	#result=`sshpass -p $ESXIPASS ssh -o StrictHostKeyChecking=no $ESXIUSER@$ESXISERVER "vim-cmd vmsvc/power.off $ESXIVMID"`
 	#echo $result
 done
 }
+
 
 
 if [ -z "$CONTENT" ]; then
