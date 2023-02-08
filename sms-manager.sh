@@ -17,10 +17,6 @@ ESXIVMID="7"         ########## Please run vim-cmd vmsvc/getallvms in esxi serve
 
 ######   ESXI Server Variable #####
 
-
-#alias BREAKLINE=`echo -en '\n'`
-
-
 #clear
 # break line
 echo -en '\n'
@@ -34,11 +30,13 @@ ip r c 192.168.8.1 dev tap$MODEM &>/dev/null
 
 echo  "Получаем список смс"
 
-
 CONTENT=`hlcli SmsList -boxType 1 -count 10 -page 1 -endpoint http://192.168.8.1`
 PHONENUMBERS=`hlcli SmsList -boxType 1 -count 10 -page 1 -endpoint http://192.168.8.1 | grep "Phone" | cut -d ":" -f2 | cut -d '"' -f2 | grep "+" | sort -n | uniq`
 SMSCOUNT=`hlcli SmsList -boxType 1 -count 10 -page 1 -endpoint http://192.168.8.1 | jq '.Count' -r`
+<<<<<<< HEAD
 SMSCONTENT=`hlcli SmsList -boxType 1 -count 10 -page 1 -endpoint http://192.168.8.1 | grep "Content" | cut -d ":" -f2 | cut -d '"' -f2 | sort -n | uniq`
+=======
+>>>>>>> fdd06ec58b5544ce57ff1883f0164a59d664b11b
 
 smsclear (){
 
@@ -82,4 +80,4 @@ else
 	echo "Мы не нашли смс с заданных номеров, завершаем работу скрипта"
 fi
 
-#sleep 100
+
