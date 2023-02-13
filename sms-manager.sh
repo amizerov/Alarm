@@ -55,8 +55,8 @@ numbers (){
 
 for PHONENUMBER in $PHONENUMBERS
 do
-	echo "Отправляем на сервер запрос  дергаем ссылку $URL=$PHONENUMBER&smscontent=$SMSCONTENT"
-	curl "$URL=$PHONENUMBER&smscontent=$SMSCONTENT" -s > /dev/null
+	echo "Отправляем на сервер запрос  дергаем ссылку $URL=$PHONENUMBER" #&smscontent=$SMSCONTENT"
+	curl "$URL=$PHONENUMBER" -s > /dev/null
 	echo -en '\n'
 	#echo "Отправляем на ESXI сервер команду потушить виртуалку"
 	#result=`sshpass -p $ESXIPASS ssh -o StrictHostKeyChecking=no $ESXIUSER@$ESXISERVER "vim-cmd vmsvc/power.off $ESXIVMID"`
